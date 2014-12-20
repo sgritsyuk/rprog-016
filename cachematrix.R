@@ -6,6 +6,9 @@
 ## Creates a special "matrix" object that can cache its
 ## inverse value and return it
 
+## Parameters:
+## x - matrix object
+
 makeCacheMatrix <- function(x = matrix()) {
     ix <- NULL
     set <- function(y) {
@@ -25,6 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
 ## inverse has already been calculated (and the matrix
 ## has not changed), then return the inverse value from
 ## the cache
+
+## Parameters:
+## x - makeCacheMatrix object (see above)
+## ... - additional parameters for solve function used inside
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
